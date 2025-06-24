@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import './Chat.css'
 
 function Chat (props){
@@ -28,7 +28,7 @@ return (
     <span> {props.texto} </span>
     <div className="content_time_status">
         <span className = "content_time">{props.hora}</span>
-        <samp className={statusCheck}>✔✔</samp>
+        <span className={statusCheck}>✔✔</span>
         <button onClick={() => { props.onDelete(props.id) }}>Eliminar</button>
     </div>
     

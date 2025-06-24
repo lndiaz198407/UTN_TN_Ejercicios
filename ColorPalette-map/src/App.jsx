@@ -92,7 +92,7 @@ function App() {
    
         <form onSubmit={handleNewMessage}>
           <div> 
-            <input 
+            <textarea 
               placeholder='Escribe Mensaje.' 
               id='text' 
               name='text'

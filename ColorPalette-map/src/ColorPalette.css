@@ -1,0 +1,110 @@
+.root {
+    display: flex;
+    gap: 50px;;
+}
+
+.card_palette {
+    max-width: 280px;
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+
+.card_palette__content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: 0px solid transparent;
+    border-radius: 10px;
+    overflow: hidden;
+
+}
+
+
+
+
+
+.card_palette__content__color {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: end;
+    width: 100%;
+    border: 0px solid transparent;
+    
+}
+
+.card_palette__content__color0{
+    height: 114px;
+}
+.card_palette__content__color1{
+    height: 73px;
+}
+.card_palette__content__color2{
+    height: 51px;
+}
+.card_palette__content__color3{
+    height: 42px;
+}
+
+.card_palette__content__color-text{
+    background-color: rgba(0, 0, 0, 0.22);
+    color: white;
+    padding: 5px;
+    border-top-right-radius: 5px;
+    font-family: sans-serif;
+    width: 85px;
+    display: none;
+}
+
+.card_palette__content__color:hover .card_palette__content__color-text{
+    display: flex;
+}
+
+
+.card_palette__likes {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+.card_palette__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 208px;
+
+    
+}
+.card_palette__likes-count{
+    font-size: 16px;
+    margin-left: 5px;
+    font-family: sans-serif;
+    color: rgba(43, 41, 41, 0.753);
+}
+.card_palette__likes-button{
+    width: 73px;
+    height: 38px;
+    margin-top: 15px;
+    border-radius: 10px;
+    background-color: transparent;
+    border: 1px solid rgba(128, 128, 128, 0.267);
+    cursor: pointer;
+}
+.card_palette__likes-button:hover {
+    background-color: rgba(194, 191, 191, 0.142);
+    transition: 0.3s;
+}
+
+.card_palette__time {
+    font-size: 16px;
+    display: flex;
+    justify-content: end;
+    font-size: 12px;
+    margin-top: 15px;
+    font-family: sans-serif;
+    color: rgba(91, 88, 88, 0.537);
+}

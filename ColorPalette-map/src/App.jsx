@@ -1,8 +1,8 @@
 import React, {} from "react"
 import ColorPalette from "./ColorPalette"
-import Chat from "./Components/Chat/Chat"
-import './Components/Chat/Chat.css'
-import NewMessage from "./Components/NewMessages/NewMessage";
+import {Routes, Route} from 'react-router'
+import HomeScreen from "./Screens/HomeScreen/HomeScreen"
+
 
 function App() {
 // 1. Define tus datos de chat en un arreglo de objetos
@@ -10,15 +10,27 @@ function App() {
 
   return (
       <div>
-        <div className="content"> 
-          <Chat />  
-          
-      </div>
-   
-    <div>
-      <NewMessage/>
-    </div>
-
+         <div>
+           <Routes>
+             <Route 
+                path="/home" 
+                element={<HomeScreen />}
+              />
+              <Route 
+                path="/contact" 
+                element={<ContactScreen />}
+              />  
+              <Route 
+                path="/contact-detail" 
+                element={<ContactDetailScreen />}   
+              />
+            </Routes>         
+         </div>
+        
+     
+     
+     
+     
      <ColorPalette
             likes = {9}
             time = '58 minutes'

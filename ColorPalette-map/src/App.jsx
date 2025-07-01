@@ -2,7 +2,7 @@ import React, {} from "react"
 import ColorPalette from "./ColorPalette"
 import {Routes, Route} from 'react-router'
 import HomeScreen from "./Screens/HomeScreen/HomeScreen"
-
+import ContactScreen from "./Screens/ContactScreen/ContactScreen"
 
 function App() {
 // 1. Define tus datos de chat en un arreglo de objetos
@@ -18,12 +18,12 @@ function App() {
               />
               <Route 
                 path="/contact" 
-                element={<ContactScreen />}
-              />  
-              <Route 
+                element={<ContactScreen/>}
+              />   
+              {/*  <Route 
                 path="/contact-detail" 
                 element={<ContactDetailScreen />}   
-              />
+              />  */}
             </Routes>         
          </div>
         

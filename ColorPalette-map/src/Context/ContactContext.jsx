@@ -1,17 +1,53 @@
-import { createContext } from 'react';  
-const TestContext = createContext();
-export default TestContext;
+import { createContext, useState } from 'react';  
+
+
+const ContactContext = createContext({contacts:[]});
+
+export default ContactContext;
 export const ContactContextProvider = ({ children }) => {
-  // Define any state or functions you want to provide to the context
-  const value = {
-    // Example state or function
-    // contacts: [],
-    // addContact: (contact) => {},
-  };
+  const [contacts] = useState(
+    [
+     {
+      id: 1,
+      neme:'Luis',
+      last_time_connected:'13:39',
+      img:"https://img2.rtve.es/i/?w=1600&i=1460978487133.jpg",
+      last_message:{
+        id: 1,
+        text:'Que tal Tanto tiempo'
+      }
+     },
+    {
+      id: 2,
+      neme:'Horacio',
+      last_time_connected:'13:39',
+      img:"https://img2.rtve.es/i/?w=1600&i=1460978487133.jpg",
+      last_message:{
+         id: 1,
+        text:'Todo Bien'
+      }
+    },
+    {
+      id: 3,
+      neme:'Horacio',
+      last_time_connected:'13:39',
+      img:"https://img2.rtve.es/i/?w=1600&i=1460978487133.jpg",
+      last_message:{
+        id: 1,
+        text:'Todo Bien'
+      }  
+    }
+    ]
+  )
 
   return (
-    <TestContext.Provider value={value}>
+    <ContactContext.Provider
+    value={
+          {
+            contacts: contacts
+          }
+          }>
       {children}
-    </TestContext.Provider>
+    </ContactContext.Provider>
   );
 };

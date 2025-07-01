@@ -1,6 +1,11 @@
 import { createContext, useState } from "react";
 
-  const MessagesContext =  createContext()
+  const MessagesContext =  createContext(
+    {
+        messages: [], 
+        handleDeleteMessage: () => {},
+        handleNewMessage: () => {}  }
+  )
 
 const MessagesContextProvider = ({children})=> {
  const [messages, setmessages] = useState( [

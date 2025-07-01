@@ -9,9 +9,9 @@ export const ContactContextProvider = ({ children }) => {
     [
      {
       id: 1,
-      neme:'Luis',
+      name:'Luis',
       last_time_connected:'13:39',
-      img:"https://img2.rtve.es/i/?w=1600&i=1460978487133.jpg",
+      img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrhDN4s_Znih-_0R9sahZuYffc5ffB2UF71w&s",
       last_message:{
         id: 1,
         text:'Que tal Tanto tiempo'
@@ -19,9 +19,9 @@ export const ContactContextProvider = ({ children }) => {
      },
     {
       id: 2,
-      neme:'Horacio',
+      name:'Horacio',
       last_time_connected:'13:39',
-      img:"https://img2.rtve.es/i/?w=1600&i=1460978487133.jpg",
+      img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrhDN4s_Znih-_0R9sahZuYffc5ffB2UF71w&s",
       last_message:{
          id: 1,
         text:'Todo Bien'
@@ -29,9 +29,9 @@ export const ContactContextProvider = ({ children }) => {
     },
     {
       id: 3,
-      neme:'Horacio',
+      name:'Horacio',
       last_time_connected:'13:39',
-      img:"https://img2.rtve.es/i/?w=1600&i=1460978487133.jpg",
+      img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrhDN4s_Znih-_0R9sahZuYffc5ffB2UF71w&s",
       last_message:{
         id: 1,
         text:'Todo Bien'

@@ -13,7 +13,7 @@ export default function HomeScreen() {
   useEffect(() => {
     loadMessages(contact_id)
   },
-    [contact_id, loadMessages]
+    [contact_id,]
   )
 
   return (

@@ -1,48 +1,22 @@
 import { createContext, useState } from "react";
+import { getMessagesByContact } from "../service/messagesService";
 
-  const MessagesContext =  createContext()
+  const MessagesContext =  createContext(
+    {
+      messages: [],
+      handleDeleteMessage: () => {},
+      handleNewMessage: () => {},
+      loadMessages:() => {}     
+    }
+  )
 
 const MessagesContextProvider = ({children})=> {
- const [messages, setmessages] = useState( [
-    {
-      id: 1,
-      emisor: 'YO',
-      hora: '23:10',
-      texto: 'Hola que tal?',
-      status: 'visto'
-    },
-    {
-      id: 2,
-      emisor: 'USUARIO',
-      hora: '23:11',
-      texto: 'Si, hoy aprendi estados',
-      status: 'visto'
-    },
-    {
-      id: 3,
-      emisor: 'YO',
-      hora: '23:12',
-      texto: 'Eso que significa 🤓?',
-      status: 'no-visto'
-    },
-    {
-      id: 4,
-      emisor: 'USUARIO',
-      hora: '23:42',
-      texto: 'Que estoy aprendiendo',
-      status: 'no-visto'
-    },
-    {
-      id: 5,
-      emisor: 'YO',
-      hora: '23:12',
-      texto: 'Eso que significa 🤓?',
-      status: 'no-visto'
-    }
+ const [messages, setmessages] = useState([])
 
-  ]);
-
-
+const loadMessages = (contact_id) => {
+const messages = getMessagesByContact(contact_id)
+setmessages(messages)
+}
   /*eliminar mensages*/
   const handleDeleteMessage = (id_message) => {
     const Lista_mensajes= []
@@ -75,7 +49,8 @@ const MessagesContextProvider = ({children})=> {
                 {
                 messages: messages,
                 handleDeleteMessage: handleDeleteMessage,
-                handleNewMessage: handleNewMessage
+                handleNewMessage: handleNewMessage,
+                loadMessages: loadMessages
             }}>
             {children}
         </MessagesContext.Provider>

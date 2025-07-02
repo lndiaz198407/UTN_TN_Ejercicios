@@ -4,7 +4,7 @@
         id: 1,
         neme:'Luis',
         last_time_connected:'13:39',
-        img:"https://img2.rtve.es/i/?w=1600&i=1460978487133.jpg",
+        img:"https://www.ionlitio.com/images/2009/04/saint_seiya_personajes_seiya.jpg",
         last_message:{
           id: 1,
           text:'Que tal Tanto tiempo'
@@ -23,7 +23,7 @@
         id: 2,
         neme:'Horacio',
         last_time_connected:'13:39',
-        img:"https://img2.rtve.es/i/?w=1600&i=1460978487133.jpg",
+        img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdk_wbXRN0L3zeDcS5YPMsI1bbBebjh7XcC_Lii6ggVr3m__Km3BcThZthBDdTfkLv3to&usqp=CAU",
         last_message:{
           id: 1,
           text:'Todo Bien'
@@ -42,7 +42,7 @@
         id: 3,
         neme:'Horacio',
         last_time_connected:'13:39',
-        img:"https://img2.rtve.es/i/?w=1600&i=1460978487133.jpg",
+        img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBEgpzxL42GTzffcywYUzzcj1utrewm5TK6TgLZ5by-ws3bD6scXOK5l-GdSXdhs2LgdA&usqp=CAU",
         last_message:{
           id: 1,
           text:'Todo Bien'

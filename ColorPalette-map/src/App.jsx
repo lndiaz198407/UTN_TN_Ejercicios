@@ -3,10 +3,14 @@ import ColorPalette from "./ColorPalette"
 import {Routes, Route} from 'react-router'
 import HomeScreen from "./Screens/HomeScreen/HomeScreen"
 import ContactScreen from "./Screens/ContactScreen/ContactScreen"
+import { getMessagesByContact } from "./service/messagesService"
 
 function App() {
 // 1. Define tus datos de chat en un arreglo de objetos
   
+
+console.log(getMessagesByContact(1)) 
+ 
 
   return (
       <div>

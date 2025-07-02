@@ -3,7 +3,7 @@ import { Link } from "react-router";
 const ContactItems = ({id, name, img, last_time_connected, last_message}) => {
   return (
     
-        <Link to={'/home'}>
+        <Link to={`/contacts/${id}/messages`} >
             <div>
             <img src={img} alt={`${name} Imagen Ptrofile`} />
             <samp>{name}</samp>

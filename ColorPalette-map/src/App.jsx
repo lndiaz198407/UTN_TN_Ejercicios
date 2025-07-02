@@ -4,30 +4,31 @@ import {Routes, Route} from 'react-router'
 import HomeScreen from "./Screens/HomeScreen/HomeScreen"
 import ContactScreen from "./Screens/ContactScreen/ContactScreen"
 import { getMessagesByContact } from "./service/messagesService"
+import ContactDetailScreen from "./Screens/ContactDetailScreen/ContactDetailScreen"
 
 function App() {
 // 1. Define tus datos de chat en un arreglo de objetos
   
 
 console.log(getMessagesByContact(1)) 
- 
+
 
   return (
       <div>
          <div>
            <Routes>
              <Route 
-                path="/home" 
+                path="/contacts/:contact_id/messages" 
                 element={<HomeScreen />}
               />
               <Route 
                 path="/contact" 
                 element={<ContactScreen/>}
               />   
-              {/*  <Route 
+                <Route 
                 path="/contact-detail" 
-                element={<ContactDetailScreen />}   
-              />  */}
+                element={<ContactDetailScreen/>}   
+              /> 
             </Routes>         
          </div>
         

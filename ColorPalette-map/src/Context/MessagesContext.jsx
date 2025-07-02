@@ -41,7 +41,9 @@ const MessagesContextProvider = ({children})=> {
     }
 
   ]);
-/*eliminar mensages*/
+
+
+  /*eliminar mensages*/
   const handleDeleteMessage = (id_message) => {
     const Lista_mensajes= []
     for (const message of messages){

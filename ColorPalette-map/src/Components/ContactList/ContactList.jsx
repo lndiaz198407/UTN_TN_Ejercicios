@@ -8,7 +8,9 @@ const Contactlist = () => {
     return (
       <div>
         <ul>
+          
           {contacts.map((contact) => {
+      
               return <ContactItems 
                 key={contact.id}
                 id={contact.id}

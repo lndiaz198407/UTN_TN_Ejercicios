@@ -13,7 +13,7 @@ export default function HomeScreen() {
   useEffect(() => {
     loadMessages(contact_id)
   },
-    [contact_id, loadMessages]
+    [contact_id]
   )
 
   return (
@@ -25,7 +25,7 @@ export default function HomeScreen() {
             <NewMessage/>
         </div>
         <div> 
-          <Link to={`/contact-detail/${contact_id}'`}>
+          <Link to={`/contact-detail/${contact_id}/detail`}>
           <button>contacto </button>
           </Link>
         </div>

@@ -26,7 +26,7 @@ console.log(getMessagesByContact(1))
                 element={<ContactScreen/>}
               />   
                 <Route 
-                path="/contact-detail" 
+                path="/contact-detail/:contact_id" 
                 element={<ContactDetailScreen/>}   
               /> 
             </Routes>         

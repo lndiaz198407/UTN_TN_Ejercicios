@@ -2,7 +2,12 @@ import { createContext, useState } from 'react';
 import { getContactList } from '../service/contactService';
 
 
-const ContactContext = createContext({contacts:[]});
+const ContactContext = createContext(
+  {
+    contacts:[],
+    loadContact:() => {}
+  }
+);
 
 export default ContactContext;
 export const ContactContextProvider = ({ children }) => {
@@ -12,6 +17,12 @@ export const ContactContextProvider = ({ children }) => {
    []
 
   )
+
+const loadContact = (contact_id) => {
+  const contact = getContactList(contact_id)
+  setContacts(contact)
+}
+   
    setTimeout(() => { 
      const contact_List = getContactList();
       setContacts(contact_List);
@@ -22,7 +33,8 @@ export const ContactContextProvider = ({ children }) => {
     <ContactContext.Provider
     value={
           {
-            contacts: contacts
+            contacts: contacts,
+            loadContact:loadContact
           }
           }>
       {children}

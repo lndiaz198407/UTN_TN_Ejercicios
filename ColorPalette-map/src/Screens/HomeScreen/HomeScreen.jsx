@@ -2,9 +2,9 @@ import React, { useContext, useEffect } from 'react'
 import NewMessage from '../../Components/NewMessages/NewMessage'
 import Chat from '../../Components/Chat/Chat'
 import '../../Components/Chat/Chat.css'
-import { useParams } from 'react-router';
+import { Link, useParams } from 'react-router';
 import { MessagesContext } from '../../Context/MessagesContext';
-
+import ContactItems from '../../Components/ContactItems/ContactItems';
 export default function HomeScreen() {
   
   const { contact_id } = useParams()
@@ -13,7 +13,7 @@ export default function HomeScreen() {
   useEffect(() => {
     loadMessages(contact_id)
   },
-    [contact_id, loadMessages]
+    [contact_id]
   )
 
   return (
@@ -23,6 +23,11 @@ export default function HomeScreen() {
         </div>
         <div>
             <NewMessage/>
+        </div>
+        <div> 
+          <Link to={`/contact-detail/${contact_id}'`}>
+          <button>contacto </button>
+          </Link>
         </div>
     </div>
   )
